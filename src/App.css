@@ -261,3 +261,33 @@ h1 {
 .sort-z:hover {
   background-color: #eee;
 }
+
+
+@media screen and (max-width:600px) {
+  .current-player {
+    position: absolute;
+    width: 60vw;
+    left:15vw;
+    height: auto;
+  }
+  .body-output {
+    position: absolute;
+    width:90vw;
+    top:calc(100vh + 250px);
+    margin:0;
+    left:2%;
+  }
+  .sort-a {
+    margin-right:0;
+  }
+  .sort-z {
+    margin-right: 0;
+  }
+
+  .ceil div {
+    line-height: normal;
+  }
+  .body-output-no {
+    display: none;
+  }
+}

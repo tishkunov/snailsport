@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../App.css';
 import { connect } from "react-redux";
 import { sortByName } from '../actions/fetchData';
+import PropTypes from 'prop-types';
 
 class Sortname extends Component {
 
@@ -55,6 +56,9 @@ class Sortname extends Component {
   }
 }
 
+Sortname.propTypes = {
+  sortByName: PropTypes.func.isRequired
+}
 
 
 export default connect(null, { sortByName })(Sortname);

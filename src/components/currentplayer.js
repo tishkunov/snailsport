@@ -60,6 +60,8 @@ class Currentplayer extends Component {
   }
 }
 
+
+
 const mapStateToProps = state => {
   return {
     currentPlayer:state.data.players[0],

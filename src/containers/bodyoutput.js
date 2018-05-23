@@ -2,12 +2,11 @@ import React, { Component } from 'react';
 import '../App.css';
 import Ceil from '../components/ceil'
 import { connect } from "react-redux";
+import PropTypes from 'prop-types';
 
 class Bodyoutput extends Component {
-
-
   render() {
-    if (this.props.players.length != 0) {
+    if (this.props.players.length !== 0) {
       return (
         <div className="body-output">
           <div className="heads">
@@ -41,13 +40,19 @@ class Bodyoutput extends Component {
   }
 }
 
+Bodyoutput.propTypes = {
+  players: PropTypes.arrayOf(PropTypes.shape({
+    age: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    phone: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired
+  })).isRequired
+}
+
 const mapStateToProps = state => {
   return {
     players:state.data.players
   }
 }
-
-
-
 
 export default connect(mapStateToProps, null)(Bodyoutput);

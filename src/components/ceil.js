@@ -30,4 +30,5 @@ class Ceil extends Component {
   }
 }
 
+
 export default connect(null, { choosePlayer })(Ceil);
